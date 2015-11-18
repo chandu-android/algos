@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -37,7 +38,7 @@ public class FindDuplicateAndMissing {
         for (int i=0; i<sample.size()-1; i++) {
             if ((sample.get(i)+1) == sample.get(i + 1)) {
                 continue;
-            } else if (sample.get(i) == sample.get(i+1)){
+            } else if (sample.get(i).equals(sample.get(i+1))){
                 duplicate = sample.get(i);
             } else {
                 missing = sample.get(i)+1;
